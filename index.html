@@ -5,13 +5,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script async src="https://tally.so/widgets/embed.js"></script>
+	<script defer src="./script.js"></script>
 	<title>Tada 2</title>
 </head>
 
 <body>
-	<button class="circular-button" data-tally-layout="modal" data-tally-open="3xyQPr" data-tally-width="600"
-		data-tally-align-left="1" data-tally-overlay="1" data-tally-emoji-text="🏸" data-tally-emoji-animation="rubber-band"
-		data-tally-auto-close="2000">+</button>
+	<!-- could prefill data with "data-" attribute, that all will be forwarded to Tally -->
+	<button id="btn-roll-call" class="circular-button" data-tally-layout="modal" data-tally-open="3xyQPr"
+		data-tally-width="600" data-tally-align-left="1" data-tally-overlay="1" data-tally-emoji-text="🏸"
+		data-tally-emoji-animation="rubber-band" data-tally-auto-close="2000">+</button>
 
 
 	<div style="display: flex; justify-content: center; flex-wrap: wrap;">
@@ -19,7 +21,7 @@
 
 		<iframe
 			src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTFgwIUmoR9Pb5XN0oHzAIaQNmuzIfIi6XXSuSO0RJ43a2drHAfY2EgJQZwao0ao4CdTqi_L1jRPMRf/pubhtml?widget=true&headers=false"
-			style="flex: 0 0 75%; max-width: 75%; height: 500px; margin: 10px;"></iframe>
+			style="flex: 0 0 75%; max-width: 75%; height: 500px"></iframe>
 
 		<div style="
 					flex: 0 0 20%;
@@ -30,6 +32,11 @@
 				width="100%" height="auto" alt="QR-le-quoc-duy">
 		</div>
 	</div>
+
+	<iframe
+		src="https://calendar.google.com/calendar/embed?src=52755313fc75f472c961256933823620d33f02c1bb21e2a12676986c9524160c%40group.calendar.google.com&ctz=Asia%2FHo_Chi_Minh"
+		style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
 
 	<style>
 		.circular-button {
