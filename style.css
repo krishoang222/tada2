@@ -1,0 +1,61 @@
+ody {
+	font-family: Arial, sans-serif; /* Clear and readable font */
+	margin: 0; /* No margin */
+	padding: 20px; /* Padding around body */
+	background-color: #f9f9f9; /* Light background */
+}
+
+.container {
+	display: flex; /* Use flexbox */
+	flex-wrap: wrap; /* Allow items to wrap */
+	justify-content: center; /* Center items */
+	align-items: flex-start; /* Align items to the top */
+}
+
+.iframe-container {
+	flex: 1 1 60%; /* Flex-grow, flex-shrink, and base width */
+	min-width: 300px; /* Prevents too small width */
+	height: 80vh; /* Set height for iframe */
+	margin: 10px; /* Margin for spacing */
+}
+
+.qr-container {
+	flex: 1 1 20%; /* Flex-grow, flex-shrink, and base width */
+	min-width: 150px; /* Prevents too small width */
+	margin: 10px; /* Margin for spacing */
+}
+
+.qr-container img {
+	width: 100%; /* Responsive image */
+	height: auto; /* Maintain aspect ratio */
+}
+
+.calendar-container {
+	margin: 20px 0; /* Center calendar vertically */
+	width: 100%; /* Full width */
+	max-width: 800px; /* Increase max width for calendar */
+	height: 600px; /* Set a fixed height for calendar visibility */
+}
+
+iframe {
+	width: 100%; /* Responsive iframe */
+	height: 100%; /* Full height of the container */
+	border: solid 1px #777; /* Border styling for iframe */
+}
+
+.circular-button {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: linear-gradient(45deg, #4caf50, #8bc34a);
+	color: white;
+	border: none;
+	cursor: pointer;
+	font-size: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

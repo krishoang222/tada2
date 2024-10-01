@@ -6,59 +6,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script async src="https://tally.so/widgets/embed.js"></script>
 	<script defer src="./script.js"></script>
+	<link rel="stylesheet" href="style.css">
 	<title>Tada 2</title>
 </head>
 
 <body>
-	<!-- could prefill data with "data-" attribute, that all will be forwarded to Tally -->
 	<button id="btn-roll-call" class="circular-button" data-tally-layout="modal" data-tally-open="3xyQPr"
 		data-tally-width="600" data-tally-align-left="1" data-tally-overlay="1" data-tally-emoji-text="🏸"
 		data-tally-emoji-animation="rubber-band" data-tally-auto-close="2000">+</button>
 
+	<div class="container">
+		<div class="iframe-container">
+			<iframe
+				src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_vGpMJi_uvEgsiBEJs6XLvDNn9Dnm5HGp4sG51AaL74fh97QMGfMpWY7rMVwSTv4aKUBGnDlnUMCn/pubhtml?widget=true&headers=true"
+				style="border: solid 1px #777;" scrolling="yes"></iframe>
+		</div>
 
-	<div style="display: flex; justify-content: center; flex-wrap: wrap;">
-
-
-		<iframe
-			src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTFgwIUmoR9Pb5XN0oHzAIaQNmuzIfIi6XXSuSO0RJ43a2drHAfY2EgJQZwao0ao4CdTqi_L1jRPMRf/pubhtml?widget=true&headers=false"
-			style="flex: 0 0 75%; max-width: 75%; height: 500px"></iframe>
-
-		<div style="
-					flex: 0 0 20%;
-					min-width: 300px;">
-
+		<div class="qr-container">
 			<img
 				src="https://api.vietqr.io/image/970436-0531002580117-XwZjk4m.jpg?accountName=LE%20QUOC%20DUY&amount=0&addInfo=Tien%20cau%20long%20TADA%202"
-				width="100%" height="auto" alt="QR-le-quoc-duy">
+				alt="QR-le-quoc-duy">
 		</div>
 	</div>
 
-	<iframe
-		src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FHo_Chi_Minh&bgcolor=%23ffffff&mode=MONTH&src=NTI3NTUzMTNmYzc1ZjQ3MmM5NjEyNTY5MzM4MjM2MjBkMzNmMDJjMWJiMjFlMmExMjY3Njk4NmM5NTI0MTYwY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udmlldG5hbWVzZSNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%237986CB&color=%230B8043"
-		style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-
-	<style>
-		.circular-button {
-			position: fixed;
-			bottom: 20px;
-			right: 20px;
-			width: 60px;
-			height: 60px;
-			border-radius: 50%;
-			background: linear-gradient(45deg, #4CAF50, #8BC34A);
-			color: white;
-			border: none;
-			cursor: pointer;
-			font-size: 24px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-	</style>
-
-
-
-
+	<div class="calendar-container">
+		<iframe
+			src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FHo_Chi_Minh&bgcolor=%23ffffff&mode=MONTH&src=NTI3NTUzMTNmYzc1ZjQ3MmM5NjEyNTY5MzM4MjM2MjBkMzNmMDJjMWJiMjFlMmExMjY3Njk4NmM5NTI0MTYwY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udmlldG5hbWVzZSNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%237986CB&color=%230B8043"
+			style="border: solid 1px #777;" frameborder="0" scrolling="no"></iframe>
+	</div>
 </body>
 
 </html>
