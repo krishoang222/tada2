@@ -11,12 +11,13 @@ body {
 	justify-content: center;
 	align-items: flex-start;
 	gap: 50px; /* Adds space between children */
+	margin: 0 0 50px 0;
 }
 
 .iframe-container {
 	flex: 1 1 70%;
 	min-width: 800px;
-	min-height: 800px;
+	min-height: 600px;
 	height: 80vh;
 }
 
@@ -30,11 +31,6 @@ body {
 	width: 100%;
 	max-width: 200px;
 	height: auto;
-}
-
-.calendar-container {
-	width: 100vw;
-	margin: 50px 0; /* Center align horizontally */
 }
 
 iframe {
