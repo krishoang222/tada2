@@ -19,7 +19,7 @@ body {
 	max-width: 1500px;
 	min-width: 800px;
 	min-height: 500px;
-	height: 70vh;
+	height: 60vh;
 	border: solid 5px #777;
 }
 
@@ -61,6 +61,7 @@ iframe {
 /* style.css */
 .responsive-button {
 	text-decoration: none;
+	display: inline-block;
 	padding: 10px 20px;
 	font-size: 16px;
 	color: white;
