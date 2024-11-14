@@ -1,11 +1,7 @@
 // script.js
-function openIframe() {
-	document.getElementById('iframePopup').style.display = 'block';
+function openSheet() {
+	window.open(
+		'https://docs.google.com/spreadsheets/d/1bPuZ2BE0TTzUSrD6GOXs4E3f5Q32YhAQEdBHXIm8ECc/edit?gid=952179595',
+		'_blank'
+	);
 }
-
-window.onclick = function (event) {
-	var iframePopup = document.getElementById('iframePopup');
-	if (event.target === iframePopup) {
-		iframePopup.style.display = 'none';
-	}
-};
