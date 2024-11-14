@@ -1,46 +1,47 @@
-ody {
-	font-family: Arial, sans-serif; /* Clear and readable font */
-	margin: 0; /* No margin */
-	padding: 20px; /* Padding around body */
-	background-color: #f9f9f9; /* Light background */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 20px;
+	background-color: #f9f9f9;
 }
 
 .container {
-	display: flex; /* Use flexbox */
-	flex-wrap: wrap; /* Allow items to wrap */
-	justify-content: center; /* Center items */
-	align-items: flex-start; /* Align items to the top */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 50px; /* Adds space between children */
 }
 
 .iframe-container {
-	flex: 1 1 60%; /* Flex-grow, flex-shrink, and base width */
-	min-width: 300px; /* Prevents too small width */
-	height: 80vh; /* Set height for iframe */
-	margin: 10px; /* Margin for spacing */
+	flex: 1 1 70%;
+	min-width: 300px;
+	height: 80vh;
 }
 
 .qr-container {
-	flex: 1 1 20%; /* Flex-grow, flex-shrink, and base width */
-	min-width: 150px; /* Prevents too small width */
-	margin: 10px; /* Margin for spacing */
+	border: solid 1px #777;
+	/* flex: 1 1 20%; */
+	min-width: 50px;
 }
 
 .qr-container img {
-	width: 100%; /* Responsive image */
-	height: auto; /* Maintain aspect ratio */
+	width: 100%;
+	max-width: 200px;
+	height: auto;
 }
 
 .calendar-container {
-	margin: 20px 0; /* Center calendar vertically */
-	width: 100%; /* Full width */
-	max-width: 800px; /* Increase max width for calendar */
-	height: 600px; /* Set a fixed height for calendar visibility */
+	width: 100vw;
+	max-width: 800px;
+	height: 600px;
+	margin: 50px 0; /* Center align horizontally */
 }
 
 iframe {
-	width: 100%; /* Responsive iframe */
-	height: 100%; /* Full height of the container */
-	border: solid 1px #777; /* Border styling for iframe */
+	width: 1000px;
+	height: 100%;
+	border: solid 1px #777;
 }
 
 .circular-button {
@@ -58,4 +59,5 @@ iframe {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for better visibility */
 }
