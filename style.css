@@ -1,16 +1,16 @@
 body {
 	font-family: Arial, sans-serif;
 	margin: 0;
-	padding: 20px;
-	background-color: #75c0d9;
+	padding: 20px 50px 0 50px;
+	background-color: #b8e3f1;
 }
 
 .container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	align-items: flex-start;
-	gap: 50px; /* Adds space between children */
+	align-items: flex-end;
+	gap: 25px; /* Adds space between children */
 	margin: 0 0 50px 0;
 }
 
@@ -19,12 +19,12 @@ body {
 	max-width: 1500px;
 	min-width: 800px;
 	min-height: 500px;
-	height: 80vh;
+	height: 70vh;
+	border: solid 5px #777;
 }
 
 .qr-container {
-	border: solid 1px #777;
-	/* flex: 1 1 20%; */
+	border: solid 5px #777;
 	min-width: 50px;
 }
 
@@ -37,7 +37,6 @@ body {
 iframe {
 	width: 100%;
 	height: 100%;
-	border: solid 1px #777;
 }
 
 .circular-button {
@@ -62,10 +61,10 @@ iframe {
 /* style.css */
 .responsive-button {
 	text-decoration: none;
-	padding: 5px 10px;
+	padding: 10px 20px;
 	font-size: 16px;
 	color: white;
-	background-color: #8bc34a;
+	background-color: #4caf50;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
@@ -73,5 +72,5 @@ iframe {
 }
 
 .responsive-button:hover {
-	background-color: #4caf50;
+	background-color: #8bc34a;
 }
