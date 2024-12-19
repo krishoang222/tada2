@@ -16,15 +16,16 @@ body {
 	align-items: flex-end;
 	gap: 25px; /* Adds space between children */
 	margin: 0 0 50px 0;
+	border: solid 5px #777;
 }
 
 .iframe-container {
 	flex: 1 1 70%;
 	max-width: 1500px;
-	min-width: 800px;
-	min-height: 500px;
-	height: 60vh;
-	border: solid 5px #777;
+	width: 100%;
+	/* min-width: 800px; */
+	min-height: 750px;
+	height: 40vh;
 }
 
 .qr-container {
