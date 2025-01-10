@@ -33,6 +33,8 @@ body {
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: flex-end;
+	/* min-height: 10px; */
+	border: 30px groove darkcyan;
 }
 
 .iframe-container {
@@ -173,13 +175,6 @@ iframe {
 	backdrop-filter: blur(4px);
 }
 
-.section:has(.section-title[aria-expanded='true']):after {
-	content: '';
-	display: block;
-	background-color: rgba(255, 255, 255, 0);
-	height: 20px;
-}
-
 /* Only make sticky when section is expanded */
 .section-content:not(.visible) + .section-title {
 	position: static;
@@ -222,7 +217,6 @@ iframe {
 	transition: visibility 0s, height 0.3s ease;
 	transform-origin: top;
 	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-	margin: 0 10px 0 10px;
 }
 
 .section-content.visible {
