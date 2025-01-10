@@ -15,7 +15,6 @@ body {
 	justify-content: flex-start;
 	align-items: flex-end;
 	gap: 25px; /* Adds space between children */
-	margin: 0 0 50px 0;
 	border: solid 5px #777;
 }
 
@@ -43,22 +42,45 @@ iframe {
 	height: 100%;
 }
 
-.circular-button {
+.button-group {
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
-	width: 60px;
-	height: 60px;
+	display: flex;
+	gap: 10px;
+	z-index: 999;
+	/* iOS sticky fix */
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+.refresh-button {
+	width: 50px;
+	height: 50px;
 	border-radius: 50%;
+	background-color: #007aff;
+	color: white;
+	border: none;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.circular-button {
+	padding: 5px;
+	border-radius: 20px;
 	background: linear-gradient(45deg, #4caf50, #8bc34a);
 	color: white;
 	border: none;
 	cursor: pointer;
-	font-size: 24px;
+	font-size: 1rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for better visibility */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Create pop up button */
@@ -79,4 +101,82 @@ iframe {
 
 .responsive-button:hover {
 	background-color: #8bc34a;
+}
+
+.toggle-icon {
+	display: inline-block;
+	transition: transform 0.3s ease;
+}
+
+.section-title[aria-expanded='true'] .toggle-icon {
+	transform: rotate(180deg);
+}
+
+.section {
+	position: relative;
+	margin-bottom: 20px;
+	border-radius: 0 5px 5px 0;
+}
+
+/* Only make sticky when section is expanded */
+.section-content:not(.visible) + .section-title {
+	position: static;
+}
+
+.section-title {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	background-color: #f0f0f0;
+	margin: 0;
+	padding: 15px;
+
+	width: 100%;
+	padding: 10px 15px;
+	background-color: #f0f0f0;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.1em;
+}
+
+.section-title:hover {
+	background-color: #e0e0e0;
+}
+
+.section-content {
+	display: block;
+	visibility: hidden;
+	height: 0;
+	overflow: hidden;
+	transition: visibility 0s, height 0.3s ease;
+}
+
+.section-content.visible {
+	visibility: visible;
+	height: auto;
+}
+
+/* Section-specific border colors */
+.section[data-type='calendar'] .section-title {
+	border-left: 3px solid #4caf50;
+	border-bottom: 3px solid #4caf50;
+}
+
+.section[data-type='money'] .section-title {
+	border-left: 3px solid #ffc107;
+	border-bottom: 3px solid #ffc107;
+}
+
+.section[data-type='attendance'] .section-title {
+	border-left: 3px solid #2196f3;
+	border-bottom: 3px solid #2196f3;
+}
+
+.section[data-type='archive'] .section-title {
+	border-left: 3px solid #9e9e9e;
+	border-bottom: 3px solid #9e9e9e;
 }

@@ -59,84 +59,109 @@
 </head>
 
 <body>
-	<button id="btn-roll-call" class="circular-button" data-tally-layout="modal" data-tally-open="3xyQPr"
-		data-tally-width="600" data-tally-align-left="1" data-tally-overlay="1" data-tally-emoji-text="🏸"
-		data-tally-auto-close="2000">+</button>
+	<div class="button-group">
+		<button id="btn-refresh" class="refresh-button">&#x21bb;</button>
+		<button id="btn-roll-call" class="circular-button" data-tally-layout="modal" data-tally-open="3xyQPr"
+			data-tally-width="600" data-tally-align-left="1" data-tally-overlay="1" data-tally-emoji-text="🏸"
+			data-tally-auto-close="2000">+ Điểm danh</button>
 
-
-
-
-	<h1>💸 Tiền sân chơi</h1>
-	<div class="container">
-		<div class='tableauPlaceholder' id='viz1736027199757' style='position: relative'><noscript><a href='#'><img
-						alt='Dashboard 2 '
-						src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ta&#47;tada_share_court&#47;Dashboard2&#47;1_rss.png'
-						style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
-				<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-				<param name='embed_code_version' value='3' />
-				<param name='site_root' value='' />
-				<param name='name' value='tada_share_court&#47;Dashboard2' />
-				<param name='tabs' value='no' />
-				<param name='toolbar' value='yes' />
-				<param name='static_image'
-					value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ta&#47;tada_share_court&#47;Dashboard2&#47;1.png' />
-				<param name='animate_transition' value='yes' />
-				<param name='display_static_image' value='yes' />
-				<param name='display_spinner' value='yes' />
-				<param name='display_overlay' value='yes' />
-				<param name='display_count' value='yes' />
-				<param name='language' value='en-GB' />
-				<param name='filter' value='publish=yes' />
-			</object></div>
 	</div>
-	<ul>
-		<li>Note: Nếu mã QR gặp lỗi thì ae click nút
-			<a href="https://sharedi.vn/qr/tada" class="responsive-button" target="_blank">QR
-				(mobile)</a> này để nhập số tiền + ck nha
-		</li>
-	</ul>
 
-	<h1>🎺 Điểm danh</h1>
-	<ul>
-		<li><a href="https://docs.google.com/spreadsheets/d/1k93seeSqd74gRR8m7XwAi9_QhbOKUjkL0xfDGm8Dy1A/edit?gid=0#gid=0"
-				target="_blank">
-				Edit Excel</a></li>
-	</ul>
-	<div class="container">
-		<div class="iframe-container">
-			<iframe
-				src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_vGpMJi_uvEgsiBEJs6XLvDNn9Dnm5HGp4sG51AaL74fh97QMGfMpWY7rMVwSTv4aKUBGnDlnUMCn/pubhtml?widget=false&gid=2033809867&chrome=false"
-				style="border: solid 1px #777;" scrolling="yes"></iframe>
+
+	<div class="section" data-type="calendar">
+		<button class="section-title" aria-expanded="false">
+			<span class="title-text">📅 Lịch + địa chỉ</span>
+			<span class="toggle-icon">▼</span>
+		</button>
+		<div class="section-content" hidden>
+			<div class="container">
+				<div class="iframe-container">
+					<iframe
+						src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FHo_Chi_Minh&showPrint=0&mode=MONTH&showTz=0&title=L%E1%BB%8Bch%20Tada%20Ung%20V%C4%83n%20Khi%C3%AAm&hl=vi&src=NTI3NTUzMTNmYzc1ZjQ3MmM5NjEyNTY5MzM4MjM2MjBkMzNmMDJjMWJiMjFlMmExMjY3Njk4NmM5NTI0MTYwY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udmlldG5hbWVzZSNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%237986CB&color=%230B8043"
+						style="border:solid 1px #777" scrolling="yes"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="section" data-type="money">
+		<button class="section-title" aria-expanded="false">
+			<span class="title-text">💸 Tiền sân chơi</span>
+			<span class="toggle-icon">▼</span>
+		</button>
+		<div class="section-content" hidden>
+			<div class="container">
+				<div class='tableauPlaceholder' id='viz1736027199757' style='position: relative'><noscript><a href='#'><img
+								alt='Dashboard 2 '
+								src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ta&#47;tada_share_court&#47;Dashboard2&#47;1_rss.png'
+								style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+						<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+						<param name='embed_code_version' value='3' />
+						<param name='site_root' value='' />
+						<param name='name' value='tada_share_court&#47;Dashboard2' />
+						<param name='tabs' value='no' />
+						<param name='toolbar' value='yes' />
+						<param name='static_image'
+							value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ta&#47;tada_share_court&#47;Dashboard2&#47;1.png' />
+						<param name='animate_transition' value='yes' />
+						<param name='display_static_image' value='yes' />
+						<param name='display_spinner' value='yes' />
+						<param name='display_overlay' value='yes' />
+						<param name='display_count' value='yes' />
+						<param name='language' value='en-GB' />
+						<param name='filter' value='publish=yes' />
+					</object></div>
+
+			</div>
+			<ul>
+				<li>Note: Nếu mã QR gặp lỗi thì ae click nút
+					<a href="https://sharedi.vn/qr/tada" class="responsive-button" target="_blank">QR
+						(mobile)</a> này để nhập số tiền + ck nha
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="section" data-type="attendance">
+		<button class="section-title" aria-expanded="false">
+			<span class="title-text">🎺 Nhật ký điểm danh</span>
+			<span class="toggle-icon">▼</span>
+		</button>
+		<div class="section-content" hidden>
+			<div class="container">
+				<div class="iframe-container">
+					<iframe
+						src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_vGpMJi_uvEgsiBEJs6XLvDNn9Dnm5HGp4sG51AaL74fh97QMGfMpWY7rMVwSTv4aKUBGnDlnUMCn/pubhtml?widget=false&gid=2033809867&chrome=false"
+						style="border: solid 1px #777;" scrolling="yes"></iframe>
+				</div>
+			</div>
 		</div>
 	</div>
 
 
 
-	<h1>📅 Lịch + địa chỉ</h1>
-	<div class="container">
-		<div class="iframe-container">
-			<iframe
-				src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FHo_Chi_Minh&showPrint=0&mode=MONTH&showTz=0&title=L%E1%BB%8Bch%20Tada%20Ung%20V%C4%83n%20Khi%C3%AAm&hl=vi&src=NTI3NTUzMTNmYzc1ZjQ3MmM5NjEyNTY5MzM4MjM2MjBkMzNmMDJjMWJiMjFlMmExMjY3Njk4NmM5NTI0MTYwY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udmlldG5hbWVzZSNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%237986CB&color=%230B8043"
-				style="border:solid 1px #777" scrolling="yes"></iframe>
+	<div class="section" data-type="archive">
+		<button class="section-title" aria-expanded="false">
+			<span class="title-text">📂 Archived</span>
+			<span class="toggle-icon">▼</span>
+		</button>
+		<div class="section-content" hidden>
+			<ul>
+				<li><a href="https://docs.google.com/spreadsheets/d/1bPuZ2BE0TTzUSrD6GOXs4E3f5Q32YhAQEdBHXIm8ECc"
+						target="_blank">
+						Excel (for member)</a>
+				</li>
+
+				<li><a
+						href="https://docs.google.com/spreadsheets/d/1k93seeSqd74gRR8m7XwAi9_QhbOKUjkL0xfDGm8Dy1A/edit?gid=0#gid=0"
+						target="_blank">
+						Excel's điểm danh (for host)</a></li>
+
+			</ul>
 		</div>
 	</div>
-
-	<h1>📂 Archived</h1>
-	<ul>
-		<li><a href="https://docs.google.com/spreadsheets/d/1bPuZ2BE0TTzUSrD6GOXs4E3f5Q32YhAQEdBHXIm8ECc"
-				class="responsive-button" target="_blank">
-				Excel</a>
-		</li>
-	</ul>
-	<!-- <div class="container">
-		<div class="iframe-container">
-			<iframe
-				src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_vGpMJi_uvEgsiBEJs6XLvDNn9Dnm5HGp4sG51AaL74fh97QMGfMpWY7rMVwSTv4aKUBGnDlnUMCn/pubhtml?widget=true&chrome=false"
-				style="border: solid 1px #777;" scrolling="yes"></iframe>
-		</div>
-	</div> -->
-
-
 
 </body>
 
