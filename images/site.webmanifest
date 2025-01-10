@@ -1,6 +1,6 @@
 {
 	"name": "Tada Ung Văn Khiêm",
-	"short_name": "tadauvk",
+	"short_name": "TADA UVK",
 	"icons": [
 		{
 			"src": "/android-chrome-192x192.png",
@@ -15,5 +15,5 @@
 	],
 	"theme_color": "#ffffff",
 	"background_color": "#ffffff",
-	"display": "standalone"
+	"display": "fullscreen"
 }

@@ -21,6 +21,11 @@ body {
 	color: var(--dark-color);
 	font-family: 'Space Mono', monospace; /* More retro tech feel */
 	margin: 50px 20px;
+	font-size: 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
 }
 
 .container {
@@ -28,8 +33,6 @@ body {
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: flex-end;
-	gap: 25px; /* Adds space between children */
-	border: solid 5px #777;
 }
 
 .iframe-container {
@@ -69,9 +72,8 @@ iframe {
 }
 
 .refresh-button {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
+	padding: 10px;
+	border-radius: 30px;
 	background-color: #007aff;
 	color: white;
 	border: none;
@@ -153,8 +155,9 @@ iframe {
 }
 
 .section {
+	width: 100%;
 	border-radius: 15px 15px 0 0;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	/* padding: 0 10px 20px 10px; */
 	transition: transform 0.3s ease;
 }
@@ -192,7 +195,7 @@ iframe {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	font-size: 1.4em;
+	font-size: 2.4em;
 
 	border-bottom: 10px solid #1a237e;
 
@@ -200,8 +203,7 @@ iframe {
 	background: rgba(255, 255, 255, 0);
 	background: var(--gradient-1);
 	border-radius: 15px;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding: 20px 10px;
 	font-weight: bold;
 	letter-spacing: 1px;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
@@ -220,7 +222,7 @@ iframe {
 	transition: visibility 0s, height 0.3s ease;
 	transform-origin: top;
 	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-	margin: 0 20px 0 20px;
+	margin: 0 10px 0 10px;
 }
 
 .section-content.visible {
