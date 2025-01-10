@@ -20,7 +20,7 @@ body {
 	background-color: var(--light-color);
 	color: var(--dark-color);
 	font-family: 'Space Mono', monospace; /* More retro tech feel */
-	padding: 0 20px;
+	margin: 50px 20px;
 }
 
 .container {
@@ -93,6 +93,7 @@ iframe {
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 	transition: all 0.3s ease;
 	position: relative;
+	cursor: pointer;
 	overflow: hidden;
 }
 
@@ -143,7 +144,8 @@ iframe {
 }
 
 .section-title[aria-expanded='true'] {
-	border-bottom: 2px solid #1a237e;
+	margin-bottom: 20px;
+	background: var(--gradient-1);
 }
 
 .section-title[aria-expanded='true'] .toggle-icon {
@@ -151,19 +153,28 @@ iframe {
 }
 
 .section {
-	background: var(--gradient-1);
-	/* background: rgba(255, 255, 255, 0.9); */
-	border-radius: 15px;
-	box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
-	backdrop-filter: blur(4px);
-	border: 1px solid rgba(255, 255, 255, 0.18);
+	border-radius: 15px 15px 0 0;
 	margin-bottom: 20px;
-	padding: 0 10px 20px 10px;
+	/* padding: 0 10px 20px 10px; */
 	transition: transform 0.3s ease;
 }
 
 .section:hover {
 	transform: translateY(-5px);
+}
+
+.section:has(.section-title[aria-expanded='true']) {
+	background: var(--gradient-1);
+	box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	backdrop-filter: blur(4px);
+}
+
+.section:has(.section-title[aria-expanded='true']):after {
+	content: '';
+	display: block;
+	background-color: rgba(255, 255, 255, 0);
+	height: 20px;
 }
 
 /* Only make sticky when section is expanded */
@@ -176,22 +187,26 @@ iframe {
 	top: 0;
 	z-index: 100;
 
-	width: 100%;
 	border: none;
 	cursor: pointer;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	font-size: 1.1em;
+	font-size: 1.4em;
+
+	border-bottom: 10px solid #1a237e;
 
 	font-family: 'VT323', monospace;
 	background: rgba(255, 255, 255, 0);
-	/* border-radius: 15px; */
+	background: var(--gradient-1);
+	border-radius: 15px;
 	padding-top: 20px;
+	padding-bottom: 20px;
 	font-weight: bold;
 	letter-spacing: 1px;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-	color: white;
+	color: aquamarine;
+	margin: 0px auto;
 }
 
 .section-content {
@@ -223,17 +238,4 @@ iframe {
 		opacity: 1;
 		transform: translateY(0);
 	}
-}
-
-/* Grid background */
-.background-grid {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-image: linear-gradient(rgba(44, 62, 80, 0.1) 1px, transparent 1px),
-		linear-gradient(90deg, rgba(44, 62, 80, 0.1) 1px, transparent 1px);
-	background-size: 20px 20px;
-	z-index: -1;
 }
