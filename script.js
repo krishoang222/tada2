@@ -47,10 +47,11 @@ function initializeSectionToggles() {
 
 function initializeCountdown() {
 	let countdown = TABLEAU_LOAD_COUNTDOWN;
-	const countdownElement = document.getElementById('countdown');
 	const statusMessage = document
 		.getElementById('statusMessage')
 		.querySelector('p');
+
+	console.log('init countdown');
 
 	// Set initial message
 	if (statusMessage) {
@@ -71,6 +72,7 @@ function initializeCountdown() {
 }
 
 function initializeTableau() {
+	console.log('init tableau');
 	const divElement = document.getElementById('viz1736027199757');
 	if (!divElement) return; // Exit if element doesn't exist
 
@@ -120,8 +122,8 @@ function initializeTableau() {
 function initializeApp() {
 	initializeRefreshButton();
 	initializeSectionToggles();
-	initializeCountdown();
 	initializeTableau();
+	initializeCountdown();
 }
 
 // Since we're using defer, we don't need DOMContentLoaded
