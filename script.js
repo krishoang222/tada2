@@ -71,10 +71,58 @@ function initializeCountdown() {
 	}, 1000);
 }
 
+function initializeTableau() {
+	console.log('init tableau');
+	const divElement = document.getElementById('viz1736027199757');
+	if (!divElement) return; // Exit if element doesn't exist
+
+	const vizElement = divElement.getElementsByTagName('object')[0];
+
+	// Insert loading indicator before the tableau div
+	const loadingDiv = document.createElement('div');
+	loadingDiv.id = 'tableauLoading';
+	loadingDiv.className = 'loading-tableau';
+	loadingDiv.innerHTML = `
+			<div class="spinner"></div>
+			<p>Đang tải bảng thống kê...</p>
+	`;
+	divElement.parentNode.insertBefore(loadingDiv, divElement);
+
+	// Set initial dimensions
+	if (divElement.offsetWidth > 800) {
+		vizElement.style.minWidth = '800px';
+		vizElement.style.maxWidth = '100%';
+		vizElement.style.minHeight = '1000px';
+		vizElement.style.maxHeight = divElement.offsetWidth * 0.75 + 'px';
+	} else if (divElement.offsetWidth > 500) {
+		vizElement.style.minWidth = '800px';
+		vizElement.style.maxWidth = '100%';
+		vizElement.style.minHeight = '1000px';
+		vizElement.style.maxHeight = divElement.offsetWidth * 0.75 + 'px';
+	} else {
+		vizElement.style.width = '100%';
+		vizElement.style.minHeight = '750px';
+		vizElement.style.maxHeight = divElement.offsetWidth * 1.77 + 'px';
+	}
+
+	const scriptElement = document.createElement('script');
+	scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+
+	// Hide loading indicator when Tableau is loaded
+	scriptElement.onload = function () {
+		setTimeout(function () {
+			loadingDiv.style.display = 'none';
+		}, 2000); // Give Tableau a couple seconds to render
+	};
+
+	vizElement.parentNode.insertBefore(scriptElement, vizElement);
+}
+
 // Initialize refresh button and section toggles
 function initializeApp() {
 	initializeRefreshButton();
 	initializeSectionToggles();
+	initializeTableau();
 	initializeCountdown();
 }
 
